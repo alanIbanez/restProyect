@@ -34,7 +34,7 @@ namespace backRestaurante
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "backRestaurante", Version = "v1" });
             });
-            var conexion = @"Server=DESKTOP-RM94JU0\SQLEXPRESS; DataBase=Restaurante3; Trusted_Connection=True; ConnectRetryCount = 0";
+            var conexion = @"Server=DESKTOP-RM94JU0\SQLEXPRESS; DataBase=Restaurante2; Trusted_Connection=True; ConnectRetryCount = 0";
             services.AddDbContext<MyDbContext>(options => options.UseSqlServer(conexion));
 
             services.AddCors(options => options.AddPolicy("AllowWebApp",
