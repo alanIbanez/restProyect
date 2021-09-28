@@ -1,0 +1,5 @@
+.mouseHover:hover{
+  background-color: darkgray;
+  cursor: pointer;
+  transition: all 0.7 ease-in-out;
+}

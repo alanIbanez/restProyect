@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Cliente</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Total</th>
+        <th scope="col">Ventas</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of ventas">
+        <td>{{venta.nombre}}</td>
+        <td>{{venta.fecha}}</td>
+        <td>{{venta.total | currency}}</td>
+        <td>
+          <button type="button" class="btn btn-success">Ver
+            <i class="far fa-eye text-info"></i>
+          </button>
+         
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

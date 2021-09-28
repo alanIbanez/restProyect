@@ -1,0 +1,25 @@
+<div class="container">
+  <form class="row g-3" #checkoutForm="ngForm">
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Nombre del cliente:</label>
+      <input type="text" class="form-control" id="nombreCliente" 
+      required
+      [(ngModel)]="orden.nombre"
+      name="nombre"
+      #name="ngModel"placeholder="Nombre y apellido">
+    </div>
+    <div class="col-12">
+      <label for="inputAddress2" class="form-label">Fecha</label>
+      <input type="text" class="form-control" id="fecha" 
+      required
+      [(ngModel)]="orden.fecha"
+      name="fecha"
+      #fecha="ngModel"placeholder="Fecha de venta">
+    </div>
+  </form>
+</div>
+
+  <app-details></app-details>
+  <div class="container_button">
+    <button type="submit" (click)="onSubmit(checkoutForm)" class="btn btn-primary">Vender</button>
+  </div>

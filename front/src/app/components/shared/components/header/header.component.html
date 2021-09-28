@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink] = "['/']">Mi tienda</a>
+    
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active mouseHover" (click)="goToPuntoDeVenta()">Punto de venta</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mouseHover" (click)="goToPlatos()">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active mouseHover" (click)="goToVentas()">Ventas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mouseHover" (click)="goToReporte()">Reporte</a>
+        </li>
+        <li class="nav-item">
+          <span class="navbar-text">
+            <app-cart class="mouseHover" (click)="goToCheckout()"></app-cart>
+          </span>
+        </li>
+      </ul>
+      
+     
+    </div>
+  </div>
+</nav>

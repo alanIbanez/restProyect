@@ -1,0 +1,9 @@
+<ng-container *ngIf="{total: total$ | async, quantity: quantity$ | async } as dataCart">
+  <ng-container *ngIf="dataCart.total">
+    <i class="fas fa-shopping-cart">
+      Total {{dataCart.total | currency}}
+      Cantidad{{dataCart.quantity}}
+    </i>
+  </ng-container>
+</ng-container>
+

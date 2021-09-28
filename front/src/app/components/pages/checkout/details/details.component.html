@@ -1,0 +1,26 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Plato</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Sub-total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cart$ | async">
+          <td>{{item.nombre}}</td>
+          <td>{{item.qty}}</td>
+          <td>{{item.costo | currency}}</td>
+          <td>{{item.qty * item.costo  | currency}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <div class="container__total">
+    <p class="total">
+      <strong>Total: <span>{{total$ | async | currency}}</span></strong>
+    </p>
+  </div>
+</div>
